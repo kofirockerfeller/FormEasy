@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Form Filler",
+    "version": "1.0",
+    "description": "Automatically fills forms",
+    "permissions": [
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "images/ext.png",
+      "48": "images/exten2.png",
+      "128": "images/extension.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/ext.png",
+        "48": "images/exten2.png",
+        "128": "images/extension.png"
+      }
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"]
+        }
+      ]
+  }
+  
